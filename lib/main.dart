@@ -1,47 +1,33 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
-// expanded helps to take the available space of the container 
+
+// expanded helps to take the available space of the container
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "HEllo",
+      title: "Raised Buttom",
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
         appBar: AppBar(
           title: AppBar(
-            title: Text("Scaffold"),
+            title: Text("Raised Button"),
           ),
         ),
         body: Container(
           color: Colors.deepPurple,
           alignment: Alignment.center,
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: Text("Container 1 hello world",
-                   textDirection: TextDirection.ltr,
-                   style: TextStyle(  
-                     decoration: TextDecoration.none,
-                     fontSize: 30,
-                     fontFamily: 'Arial',
-                     fontWeight: FontWeight.bold,
-                     color: Colors.white),
-                     ),
+          child: Center(
+            child: RaisedButton(
+              child: Text(
+                "RAISED BUTTON",
+                style: TextStyle(color: Colors.white),
               ),
-              Expanded(
-                child: Text("Container 2 hello world",
-                 textDirection: TextDirection.ltr,style: TextStyle(
-                   decoration: TextDecoration.none,
-                   fontSize: 30,
-                   fontFamily: 'Arial',
-                   fontWeight: FontWeight.bold,
-                   color: Colors.white
-                 ),
-                 ),
-              ),
-            ],
+              onPressed: () {},
+              splashColor: Colors.lightBlue,
+              color: Colors.lightBlueAccent,
+            ),
           ),
         ),
       ),
