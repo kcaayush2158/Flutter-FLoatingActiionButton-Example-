@@ -22,26 +22,11 @@ class TextPage extends StatelessWidget {
           child: RaisedButton(
             color: Colors.redAccent,
             textColor: Colors.white,
-            onPressed: () {
-              pressMe(context);
-            },
+            onPressed: null,
             child: Text("Press Me"),
           ),
         ),
       ),
     );
-  }
-
-  void pressMe(BuildContext context) {
-    var alert = AlertDialog(
-      title: Text("Alert Dialog"),
-      content: Text("Success..!"),
-    );
-
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return alert;
-        });
   }
 }
